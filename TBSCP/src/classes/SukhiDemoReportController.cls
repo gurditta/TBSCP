@@ -19,6 +19,6 @@ public class SukhiDemoReportController{
         return scoresCount;
     }
     public Integer gettotalDeleted(){
-        return totalDeleted;//hello whats up //
+        return totalDeleted;//yo yo
     }
 }
