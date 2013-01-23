@@ -1,0 +1,9 @@
+<apex:page controller="redirectonthebasisofpicklist">
+	<!-- Begin Default Content REMOVE THIS -->
+
+	<apex:form >
+		<apex:selectList id="rtp" size="1" title="RecordType">
+			<apex:selectOptions value="{!RecordType}"></apex:selectOptions>
+		</apex:selectList>
+	</apex:form>
+</apex:page>

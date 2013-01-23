@@ -1,0 +1,1 @@
+<apex:page standardController="case" recordSetVar="c" action="{!URLFOR($Action.case.List,$ObjectType.case)}" />

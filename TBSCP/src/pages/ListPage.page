@@ -1,0 +1,38 @@
+<apex:page Controller="AccountPagination" >         
+
+  <apex:form id="theForm">
+<apex:pageBlock title="Data List">
+        <apex:pageBlockButtons >
+        <apex:commandbutton value="Add New Data" action="{!Add}" />
+          <apex:commandbutton value="Delete" action="{!Del}" />
+    </apex:pageBlockButtons>
+    
+
+<apex:pageBlockSection >
+  {!selectedRowIndex}
+            <apex:pageblockTable value="{!accountPagination}" var="c" >
+                           <apex:column >
+                          <apex:selectCheckboxes value="{!c.Id}">
+            <apex:selectOptions value="{!c.Id}"/>
+        </apex:selectCheckboxes>
+                        </apex:column>
+             <apex:column headerValue="Name" value="{!c.Name}"></apex:column>
+            <apex:column headerValue="EmailId" value="{!c.EmailId__c}"></apex:column>
+
+     
+
+      </Apex:pageblockTable>          
+
+    </apex:pageBlockSection>
+
+    <apex:panelGrid columns="2">
+
+     
+
+    </apex:panelGrid>
+
+
+
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

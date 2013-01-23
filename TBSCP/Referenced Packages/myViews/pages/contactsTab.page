@@ -1,0 +1,1 @@
+<apex:page standardController="contact" recordSetVar="c" action="{!URLFOR($Action.Contact.List,$ObjectType.Contact)}" />

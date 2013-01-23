@@ -1,0 +1,26 @@
+<apex:page >
+	<style type="text/css">
+/* Color for the title bar */
+.bPageBlock .pbHeader {
+	background-color: #FF0000;
+}
+
+.bPageBlock .pbBody { /* Color for the pageblock background */
+	background-color: #FFFFFF;
+}
+
+.bPageBlock { /* Custom background image at the bottom of the pageblock
+               which you may need to edit.      
+            background-image:url(your_new_background_image);*/
+	
+}
+</style>
+	<apex:pageBlock title="Color Test">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+	</apex:pageBlock>
+</apex:page>

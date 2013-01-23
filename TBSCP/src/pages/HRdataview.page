@@ -1,0 +1,2 @@
+<apex:page standardController="HR_Dataform__c" recordSetVar="a"
+	action="{!URLFOR($Action.HR_Dataform__c.List,$ObjectType.HR_Dataform__c)}" />

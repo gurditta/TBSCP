@@ -1,0 +1,17 @@
+<apex:page controller="ScorecardInstanceController">
+	<apex:form >
+		<apex:commandButton action="{!echoVal}" value="Eval"
+			reRender="resultPanel">
+			<apex:pageBlock rendered="true" id="resultPanel">
+				<apex:pageBlockTable value="{!finances}" var="row" rendered="true">
+					<apex:column headerValue="Metrics">
+						<apex:inputField value="{!row.current_value__c}" />
+					</apex:column>
+				</apex:pageBlockTable>
+			</apex:pageBlock>
+
+
+
+		</apex:commandButton>
+	</apex:form>
+</apex:page>

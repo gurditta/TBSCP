@@ -1,0 +1,81 @@
+<apex:page controller="BulkDeleteController" >
+
+<script>
+
+
+function checkAll(cb)
+
+{
+
+var inputElem = document.getElementsByTagName("input");
+
+for(var i=0; i<inputElem.length; i++)
+
+{
+
+if(inputElem[i].id.indexOf("checkedone")!=-1)
+
+inputElem[i].checked = cb.checked;
+
+}
+
+}
+
+</script>
+
+
+ 
+
+<apex:form >
+
+<apex:PageBlock title="Account">
+
+
+
+<apex:pageBlockButtons >
+
+<apex:commandButton action="{!edit}" value="Edit" /> 
+<apex:commandButton action="{!deleteAll}" onclick="return confirm('are you sure?');" value="Delete" /> 
+ <apex:commandbutton value="Add New Data" action="{!Add}" />
+
+</apex:pageBlockButtons>
+
+ 
+
+<apex:dataTable value="{!accounts}" var="a" columnswidth="50px,50px" cellpadding="4" border="1">
+
+<apex:column >
+
+<apex:facet name="header">
+
+<apex:inputCheckbox >
+
+<apex:actionSupport event="onclick" action="{!GetSelected}" onsubmit="checkAll(this)"/>
+
+</apex:inputCheckbox>
+
+</apex:facet>
+
+<apex:inputCheckbox value="{!a.selected}" id="checkedone">
+
+<apex:actionSupport event="onclick" action="{!GetSelected}" rerender="Selected_PBS"/>
+
+</apex:inputCheckbox>
+
+</apex:column>
+
+<apex:column headervalue="Account Name" value="{!a.acc.Name}" />
+
+<apex:column headervalue="Account Number" value="{!a.acc.EmailId__c}" />
+
+
+
+</apex:dataTable>
+
+</apex:pageBlock>
+
+</apex:form>
+
+<apex:messages />
+
+</apex:page>

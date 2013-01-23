@@ -1,0 +1,43 @@
+<apex:page controller="userExtension">
+	<apex:form >
+		<script type="text/javascript">      
+       window.onload = doSearch;
+       function doSearch(){
+        searchServer(document.getElementById('j_id0:j_id1:j_id2:j_id5:month').value,document.getElementById('month').value,document.getElementById("category").value);
+       }
+       var month = new Array("January","February","March","April","May","June","July","August","September","October","November","December","Jan-Mar","Apr-Jun,","Jul-Sept","Oct-Dec","Jan-Jun","Jul-Dec","Jan-Dec");
+       var year  = new Array("2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030");
+       today     = new Date();
+       thismonth = today.getMonth();
+       thisyear  = today.getFullYear();
+         document.getElementById('month').value =thismonth;
+  </script>
+		<apex:pageBlock title="New HR Data Form Edit" mode="edit">
+			<apex:pageBlockButtons location="both">
+				<apex:commandButton action="{!save}" value="Save">
+				</apex:commandButton>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection title="Identifier" columns="2">
+				<apex:inputField value="{!u.Name}" />
+				<apex:inputField id="year" value="{!u.Year__c}" />
+				<apex:inputField id="month" value="{!u.Month__c}" />
+				<apex:inputField id="month2" value="{!u.Month2__c}" />
+				<select id="month" onchange="doSearch();">
+					<apex:repeat value="{!Months}" var="month">
+						<option value="{!month}">{!month}</option>
+					</apex:repeat>
+				</select>
+				<script type="text/javascript"> 
+     document.getElementById('month').value =  month[thismonth];</script>
+				<script> 
+
+                 document.getElementById('j_id0:j_id1:j_id2:j_id5:month').value ={!Monthname};
+                 document.getElementById('j_id0:j_id1:j_id2:j_id5:month2').value ={!Year};
+                 </script>
+
+				<apex:inputField value="{!u.Attrition_rate__c}" />
+				<apex:inputField value="{!u.ESAT_score__c}" />
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

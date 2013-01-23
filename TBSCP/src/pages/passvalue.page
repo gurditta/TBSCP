@@ -1,0 +1,14 @@
+<apex:page standardController="Account"
+  recordSetVar="accounts"
+  extensions="quickEmailController">
+  <apex:form >
+     <apex:pageBlock >
+       <apex:pageBlockTable value="{!selected}" var="account">
+         <apex:column value="{!account.name}"/>
+       </apex:pageBlockTable>
+       <apex:pageBlockButtons location="bottom">
+         <apex:commandButton value="Do Something" action="{!doSomething}"/>
+       </apex:pageBlockButtons>
+     </apex:pageBlock>
+  </apex:form>
+</apex:page>

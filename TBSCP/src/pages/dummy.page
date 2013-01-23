@@ -1,0 +1,33 @@
+<apex:page controller="dipslayinputtextinpageblocktable" >
+  <Apex:form >
+  <Apex:pageBlock >
+      <apex:pageblockTable value="{!con}" var="c" >
+      
+
+
+      <apex:column ><apex:facet name="header">Name</apex:facet>{!c.name}</apex:column>
+      <apex:column ><apex:facet name="header">Mailing City </apex:facet><apex:inputField value="{!c.mailingcity}" /></apex:column>
+      <apex:column ><apex:facet name="header">Email</apex:facet><apex:inputField value="{!c.Email}" /></apex:column>
+  
+     
+     
+      </Apex:pageblockTable>
+                 
+            <apex:pageBlockTable id="pb1" value="{!lstWrapper}"  var="item">
+                <apex:column headerValue="">
+                    <apex:outputLabel value="{!item.Name}" />
+                </apex:column>
+                 <apex:column headerValue="">
+                 <apex:outputLabel value="{!item.MailingCity}" />
+                </apex:column>
+                 <apex:column headerValue="">
+                 <apex:outputLabel value="{!item.Email}" />
+                </apex:column>
+            </apex:pageBlockTable>
+  <apex:commandButton value="Save" action="{!updatecon}" />
+  <apex:commandButton value=" Add Row " action="{!AddRecord}" reRender="pb1"/>
+
+  </Apex:pageBlock>
+ 
+  </Apex:form>
+</apex:page>

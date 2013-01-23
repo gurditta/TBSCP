@@ -1,0 +1,2 @@
+<apex:page standardController="Score_Card__c" recordSetVar="a"
+	action="{!URLFOR($Action.scorecard__Score_Card__c.List,$ObjectType.scorecard__Score_Card__c)}" />

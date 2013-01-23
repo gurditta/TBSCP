@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>myViews</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <namespacePrefix>myViews</namespacePrefix>
+    <types>
+        <members>accountsTab</members>
+        <members>campaignsTab</members>
+        <members>casesTab</members>
+        <members>contactsTab</members>
+        <members>leadsTab</members>
+        <members>opportunitiesTab</members>
+        <members>setup</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Setup</members>
+        <name>CustomPageWebLink</name>
+    </types>
+    <version>26.0</version>
+</Package>

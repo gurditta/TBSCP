@@ -1,0 +1,1 @@
+<apex:page standardController="lead" recordSetVar="l" action="{!URLFOR($Action.lead.List,$ObjectType.lead)}" />

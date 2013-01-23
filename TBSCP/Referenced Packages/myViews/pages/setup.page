@@ -1,0 +1,38 @@
+<apex:page setup="true" >
+	<apex:sectionHeader title="My Views by MK Partners" subtitle="Setup"/>
+	<p />
+	<apex:form id="theForm">
+		<apex:pageBlock title="My Views Setup" helpUrl="http://www.mkpartners.com/" helpTitle="My Views Help">
+			<apex:PageBlockSection columns="1" >
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the accountsTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Account&setupid=AccountLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Accounts Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the campaignsTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Campaign&setupid=CampaignLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Campaigns Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the casesTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Case&setupid=CaseLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Cases Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the contactsTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Contact&setupid=ContactLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Contacts Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the leadsTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Lead&setupid=LeadLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Leads Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="After clicking the link select the opportunitiesTab option in the drop-down" />
+					<apex:outputLink value="/04u/e?type=Opportunity&setupid=OpportunityLinks&Name=Tab&retURL=%2Fapex%2Fmyviews__setup" >Setup Opportunities Tab</apex:outputLink>
+				</apex:pageBlockSectionItem>
+			</apex:PageBlockSection>
+		</apex:pageBlock>
+
+		<apex:pageBlock >
+			<apex:outputText value="If you like this product, we would greatly appreciate it if you would write a review on the "/><apex:outputLink value="http://appexchange.salesforce.com/writeReview?listingId=a0N300000016gkMEAQ" target="_blank" >AppExchange</apex:outputLink>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

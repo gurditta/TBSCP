@@ -1,0 +1,26 @@
+<apex:page controller="SukhiDemoReportController">
+    <apex:pageBlock title="Details" id="popup">
+    <apex:outputtext style="border:1px;background-color:#F3F3EC;" value="There are currently {!scoresCount} Records in database."/>
+        <apex:pageBlockTable value="{!scores}" var="row">
+            <apex:column headerValue="Name" width="250px">
+                <apex:outputField value="{!row.Name}" />
+            </apex:column>
+            <apex:column headerValue="Email" width="250px">
+                <apex:outputField value="{!row.EmailId__c}" />
+            </apex:column>
+            <apex:column headerValue="IsDeleted" width="50px">
+                <apex:outputField value="{!row.IsDeleted}" />
+            </apex:column>
+            <apex:column headerValue="Id" width="50px">
+                <apex:outputField value="{!row.Id}" />
+            </apex:column>            
+            <apex:column headerValue="Restore" width="50px">
+                <apex:form >
+                <apex:commandbutton value="Restore" action="{!restoreDeletedRecords}" rerender="" immediate="true">
+                    <apex:param name="deletedRecordEmail" value="{!row.Id}" />
+                </apex:commandbutton>
+                </apex:form>
+            </apex:column>               
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

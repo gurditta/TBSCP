@@ -1,0 +1,25 @@
+<apex:page controller="Test" tabStyle="User" standardStylesheets="false">
+
+
+<apex:form >
+<apex:pageBlock >
+
+
+
+<apex:repeat var="filter" value="{!counterId}">
+ <apex:pageblockTable value="{!finances}" var="c" >
+      <apex:column ><apex:facet name="header">Name</apex:facet><apex:inputField value="{!c.Name}"/></apex:column>
+      <apex:column ><apex:facet name="header">Email</apex:facet><apex:inputField value="{!c.EmailId__c}" /></apex:column>
+     
+     
+     
+      </Apex:pageblockTable>
+
+</apex:repeat>
+
+
+</apex:pageBlock>
+<apex:commandButton value="Add New Row" action="{!addFilter}" />
+<div align="center"><apex:commandButton action="{!save}" value="save" id="saveButton"/></div>
+</apex:form>
+</apex:page>

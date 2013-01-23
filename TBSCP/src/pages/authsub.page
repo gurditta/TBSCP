@@ -1,0 +1,3 @@
+<apex:page >
+  System.debug( 'Hello World' );
+</apex:page>
